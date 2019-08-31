@@ -1,0 +1,16 @@
+{
+  "name": "web3d",
+  "version": "1.0.0",
+  "description": "Interactive museum - Web3D module project",
+  "main": "index.js",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "134730",
+  "license": "ISC"
+}
