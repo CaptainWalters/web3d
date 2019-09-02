@@ -5,7 +5,7 @@ class Load {
         if(is_array($data)) {
             extract($data);
         }
-        include $file_name . '.php';
+        require $file_name . '.php';
     }
 }
 ?>

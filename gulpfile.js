@@ -34,7 +34,7 @@ gulp.task('js', function() {
 // Copying fonts 
 gulp.task('fonts', function() {
     return gulp.src('./src/fonts/**/*')
-      .pipe(gulp.dest('dist/fonts'))
+      .pipe(gulp.dest('./dist/fonts'))
 });
 
 // So the thing

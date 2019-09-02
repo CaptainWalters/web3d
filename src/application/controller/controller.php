@@ -11,18 +11,20 @@ class Controller {
         //echo $pageURI;
         //$request = explode("/",$pageURI);
         $pageURI = strtok($pageURI,"?");
-        //echo $pageURI;
-        //$stream = strtok("");
-        //parse_str($pageURI,$this->parameters);
+        
+        
 
-        if (isset($_GET['id'])) {
+        //if (isset($_GET['id'])) {
             //echo gettype($_GET['id']);
-        } else {
-             
+        //} else {
             // Fallback behaviour goes here
+        //}
+        try {
+            $this->$pageURI();
+        } catch (\Throwable $th) {
+            //throw $th;
         }
-
-        $this->$pageURI();
+        
     }
 
     function home() {
