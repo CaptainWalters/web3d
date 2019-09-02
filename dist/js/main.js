@@ -1,5 +1,7 @@
 $(document).ready(function() {
-    $.getJSON('../db/monopoly.json', function(data) {
+    $.getJSON('./db/monopoly.json', function(data) {
+        //let data = JSON.parse(`<?php echo $data; ?>`);
+        //document.write("<?php $foo='hi' echo $foo ?>");
         let output='<div class="row">';
         for(let i in data.components) {
             output+='\

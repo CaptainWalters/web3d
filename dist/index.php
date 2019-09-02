@@ -34,22 +34,22 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a id="navHome" class="nav-link" href="#">Home</a>
+                        <a id="navHome" class="nav-link" href="index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="navModels" class="nav-link" href="#">Models</a>
+                        <a id="navModels" class="nav-link" href="index.php?modelview">Models</a>
                     </li>
                     <li class="nav-item">
-                        <a id="navVariations" class="nav-link disabled" href="#">Variations</a>
+                        <a id="navVariations" class="nav-link disabled" href="index.php?variations">Variations</a>
                     </li>
                     <li class="nav-item dropright">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Web3d assessment
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Statement of Originality</a>
-                            <a class="dropdown-item" href="#">Codebase Download</a>
-                            <a class="dropdown-item" href="#">Model Download</a>
+                            <a class="dropdown-item" href="index.php?statement">Statement of Originality</a>
+                            <a class="dropdown-item" href="assets/downloads/codebase.zip">Codebase Download</a>
+                            <a class="dropdown-item" href="assets/downloads/models.zip">Model Download</a>
                         </div>
                     </li>
                 </ul>
@@ -57,20 +57,16 @@
         </div>
     </nav>
 
-    <!-- Home content -->
-    <main role="main" id="home" style="display: block">
-        <!-- Banner -->
-        <section class="container-fluid" id="banner">
-            <h1 id="title_home"></h1>
-            <h2 id="subtitle_home"></h2>
-            <p id="description_home"></p>
-        </section>
+    <!-- SPA content -->
+    <?php
 
-        <!-- SERVER GENERATED ARTICLES -->
-        <div id="articleCards" class="container"></div>
-        <!-- END OF GENERATED STUFF -->
-    </main> <!-- End of home -->
-    
+    error_reporting(E_ALL | E_STRICT);
+    ini_set('display_errors', 1);
+
+    require 'application/mvc.php';
+    ?>
+    <!-- End of PHP hell -->
+
     <!-- Footer -->
     <footer>
 

@@ -3,7 +3,7 @@
 class Model {
     public $dbhandle;
     
-    /*public function __construct() {
+    public function __construct() {
         $dsn = 'sqlite:./db/Monopoly.sqlite';
 
         try {
@@ -17,11 +17,11 @@ class Model {
             echo "Cannot connect to the database";
             print new Exception($e->getMessage());
         }
-    }*/
-
-    public function dbGetJson() {
-        return file_get_contents('./db/monopoly.json');
     }
+
+    /*public function dbGetJson() {
+        return file_get_contents('./db/monopoly.json');
+    }*/
 
 }
 ?>
