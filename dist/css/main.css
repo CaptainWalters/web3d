@@ -18,7 +18,7 @@ body {
   body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: 'Oswald', sans-serif; }
 
-.main_contents {
+main {
   margin-top: 10px;
   margin-bottom: 10px; }
 
@@ -29,6 +29,7 @@ body {
   margin-bottom: 10px;
   background-color: #d8d8d8; }
   .card .btn-custom {
+    font-size: 12px;
     background-color: #760003;
     color: #f5ebeb; }
     .card .btn-custom:hover, .card .btn-custom:focus {
@@ -47,38 +48,24 @@ body {
     height: 100%; }
 
 .logo {
-  margin-top: 3px; }
-  .logo h1, .logo h2, .logo h3 {
-    padding-top: 0px;
-    padding-left: 0px;
+  align-content: flex-start; }
+  .logo i {
     float: left; }
+  .logo h1, .logo h2 {
+    font-family: 'geometric231';
+    padding-top: 0px; }
   .logo h1 {
-    font-family: 'geometric231';
-    font-size: 29px;
-    margin: 0;
-    margin-top: -10px;
-    margin-bottom: -15px;
-    padding-right: 2px; }
+    font-size: 20px;
+    margin: 10px;
+    float: left; }
   .logo h2 {
-    font-family: 'geometric231';
-    font-size: 31px;
-    margin-top: -6px;
-    margin-bottom: -15px;
-    padding-right: 3px; }
-  .logo h3 {
-    font-size: 18px;
-    margin-top: 0px;
-    margin-bottom: -5px; }
-  .logo p {
-    font-size: 7px;
-    margin-top: 23px;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-left: 3px; }
+    font-size: 16px;
+    margin-top: 12px;
+    float: right; }
 
 .navbar_coca_cola {
   background-color: maroon;
-  min-height: 60px; }
+  min-height: 20px; }
   .navbar_coca_cola .navbar-brand {
     color: #f5ebeb; }
     .navbar_coca_cola .navbar-brand:hover {
@@ -195,9 +182,10 @@ body {
 .nav-tabs .nav-link:hover {
   border: 1px solid transparent; }
 
-#main_3d_image {
-  background-image: url(../assets/images/main_3D.jpg);
+#banner {
+  background-image: url(../assets/images/banner.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   height: 201px; }
 
 #main_text {
@@ -224,48 +212,36 @@ body {
     line-height: 1.2; }
 
 @media (min-width: 576px) {
-  #main_3d_image {
-    background-image: url(../assets/images/main_3D_1400.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+  #banner {
     height: 240px; } }
 
 @media (min-width: 992px) {
-  #main_3d_image {
+  #banner {
     min-height: 550px; }
   .logo {
     margin-top: -5px; }
-    .logo h1, .logo h2, .logo h3 {
+    .logo i {
+      margin-top: 9px; }
+    .logo h1, .logo h2 {
       padding-top: 0px;
-      padding-left: 0px;
-      float: left; }
+      padding-left: 0px; }
     .logo h1 {
-      font-size: 59px;
       margin: 0;
       margin-top: 0px;
-      margin-bottom: -20px;
-      padding-right: 0px; }
+      padding: 0px 10px;
+      font-size: 50px; }
     .logo h2 {
-      font-size: 65px;
-      margin-top: 7px;
-      margin-bottom: -25px;
-      padding-right: 6px; }
-    .logo h3 {
-      font-size: 40px;
-      margin-top: 15px;
-      margin-bottom: -5px; }
-    .logo p {
-      font-size: 14px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      padding-top: 65px;
-      padding-left: 12px; }
+      margin-top: 10px;
+      padding-right: 0px;
+      font-size: 40px; }
   .footer {
     height: 75px; }
   .navbar-text a {
     font-size: 15px; }
   .navbar-text p {
     font-size: 23px; }
+  .card-header-tabs {
+    margin-top: -.5em; }
   .copyright {
     padding-top: 20px; }
   .social {

@@ -20,8 +20,8 @@
     <nav id="navigation" class="navbar sticky-top navbar-expand-sm">
         <div class="container">
             <a class="logo navbar-brand" href="index.php">
-                <i class="fas fa-dice fa-3x"></i>
-                <h1>Monopoly</h1>
+                <i class="fas fa-dice fa-2x"></i>
+                <h1>MONOPOLY</h1>
                 <h2>Museum</h2>
             </a>
             <!-- Menu button for mobile -->

@@ -20,8 +20,8 @@
     },
     {
       "id": "3",
-      "name": "Chance Deck",
-      "short_description": "the deck Chance cards",
+      "name": "Chance/Community Cards",
+      "short_description": "the cards of luck",
       "long_description": "a_long_string"
     },
     {

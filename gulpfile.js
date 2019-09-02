@@ -38,7 +38,7 @@ gulp.task('fonts', function() {
 });
 
 // So the thing
-gulp.task('serve', gulp.series('html','php','sass','js', function() {
+gulp.task('serve', gulp.series('html','php','sass','js','fonts', function() {
     php.server({
         port:8000,
         base:'./dist/',

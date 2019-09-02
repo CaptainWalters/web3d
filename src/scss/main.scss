@@ -25,7 +25,7 @@ body {
     }
 }
 
-.main_contents {
+main {
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -38,6 +38,7 @@ body {
     background-color: rgb(216, 216, 216);
 
     .btn-custom {
+        font-size: 12px;
         background-color: #760003;
         color: rgb(245,235,235);
         &:hover, &:focus {
@@ -61,45 +62,31 @@ body {
 }
 
 .logo {
-    margin-top: 3px;
-
-    h1, h2, h3 {
-        padding-top: 0px;
-        padding-left: 0px;
+    align-content: flex-start;
+    i {
         float: left;
     }
-    h1 {
+
+    h1, h2 {
         font-family: 'geometric231';
-        font-size: 29px;
-        margin: 0;
-        margin-top: -10px;
-        margin-bottom: -15px;
-        padding-right: 2px;
+        padding-top: 0px;
+    }
+    h1 {
+        font-size: 20px;
+        margin: 10px;
+
+        float: left;
     }
     h2 {
-        font-family: 'geometric231';
-        font-size: 31px;
-        margin-top: -6px;
-        margin-bottom: -15px;
-        padding-right: 3px;
-    }
-    h3 {
-        font-size: 18px;
-        margin-top: 0px;
-        margin-bottom: -5px;
-    }
-    p {
-        font-size: 7px;
-        margin-top: 23px;
-        margin-bottom: 0px;
-        padding-top: 0px;
-        padding-left: 3px;
+        font-size: 16px;
+        margin-top: 12px;
+        float: right;
     }
 }
 
 .navbar_coca_cola {
     background-color: maroon;
-    min-height: 60px;
+    min-height: 20px;
 
     .navbar-brand {
         color: rgb(245,235,235);
@@ -270,9 +257,10 @@ body {
     border: 1px solid transparent;
 }
 
-#main_3d_image {
-    background-image: url(../assets/images/main_3D.jpg);
+#banner {
+    background-image: url(../assets/images/banner.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     height: 201px;
 }
 
@@ -305,50 +293,35 @@ body {
 }
 
 @media(min-width: 576px) {
-    #main_3d_image {
-        background-image: url(../assets/images/main_3D_1400.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
+    #banner {
         height: 240px;
     }
 }
 
 @media(min-width: 992px) {
-    #main_3d_image {
+    #banner {
         min-height: 550px;
     }
     .logo {
         margin-top: -5px;
+        i {
+            margin-top: 9px;
+        }
 
-        h1, h2, h3 {
+        h1, h2 {
             padding-top: 0px;
             padding-left: 0px;
-            float: left;
         }
         h1 {
-            font-size: 59px;
             margin: 0;
             margin-top: 0px;
-            margin-bottom: -20px;
-            padding-right: 0px;
+            padding: 0px 10px;
+            font-size: 50px;
         }
         h2 {
-            font-size: 65px;
-            margin-top: 7px;
-            margin-bottom: -25px;
-            padding-right: 6px;
-        }
-        h3 {
+            margin-top: 10px;
+            padding-right: 0px;
             font-size: 40px;
-            margin-top: 15px;
-            margin-bottom: -5px;
-        }
-        p {
-            font-size: 14px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            padding-top: 65px;
-            padding-left: 12px;
         }
     }
     .footer {
@@ -361,6 +334,9 @@ body {
         p {
             font-size: 23px;
         }
+    }
+    .card-header-tabs {
+        margin-top: -.5em;
     }
     .copyright {
         padding-top: 20px;

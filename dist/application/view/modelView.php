@@ -1,5 +1,5 @@
 <!-- Main contents -->
-<main role="main" class="main_contents" id="models">
+<main role="main" class="container" id="models">
     <!--Holds model -->
     <div class="row">
         <!-- X3D Model -->
@@ -47,7 +47,7 @@
                 <div class="card-header gallery-header">
                     <ul class="nav nav-tabs card-header-tabs">
                         <li class="nav-item">
-                        <a class="nav-link active" href="#">Gallery</a>
+                        <a class="nav-link" href="#">Gallery</a>
                         </li>
                     </ul>
                 </div>
@@ -84,18 +84,10 @@
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
             <!-- Dropdown nav-tab -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+            <li class="nav-item">
+                <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown">
                 Cameras
                 </a>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Front</a>
-                <a class="dropdown-item" href="#">Back</a>
-                <a class="dropdown-item" href="#">Left</a>
-                <a class="dropdown-item" href="#">Right</a>
-                <a class="dropdown-item" href="#">Bottom</a>
-                <a class="dropdown-item" href="#">Top</a>
-                </div>
             </li>
             </ul>
         </div>
@@ -107,7 +99,7 @@
             <a href="#" class="btn btn-custom btn-responsive camera-font">Back</a>
             <a href="#" class="btn btn-custom btn-responsive camera-font">Left</a>
             <a href="#" class="btn btn-custom btn-responsive camera-font">Right</a>
-            <a href="#" class="btn btn-outline-dark disabled btn-responsive camera-font">Off</a>
+            <a href="#" class="btn btn-custom disabled btn-responsive camera-font">Off</a>
             <div class="card-text x3dCameraDescription drinksText">
             <p>These buttons select a limited range of X3D model viewpoints, use the dropdown menu for more camera views</p>
             </div>
@@ -120,7 +112,7 @@
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
-                <a class="nav-link active" href="#">Animation</a>
+                <a class="nav-link" href="#">Animation</a>
             </li>
             </ul>
         </div>
@@ -128,10 +120,10 @@
             <div class="card-Title x3dAnimationSubtitle drinksText">
             <h3>Animation Options</h3>
             </div>
-            <a href="#" class="btn btn-outline-light btn-responsive" onclick="spin();">RotX</a>
-            <a href="#" class="btn btn-outline-light btn-responsive">RotY</a>
-            <a href="#" class="btn btn-outline-light btn-responsive">RotZ</a>
-            <a href="#" class="btn btn-outline-dark btn-responsive" onclick="stopRotation();">Stop</a>
+            <a href="#" class="btn btn-custom btn-responsive" onclick="spin();">RotX</a>
+            <a href="#" class="btn btn-custom btn-responsive">RotY</a>
+            <a href="#" class="btn btn-custom btn-responsive">RotZ</a>
+            <a href="#" class="btn btn-custom btn-responsive" onclick="stopRotation();">Stop</a>
             <div class="card-text x3dAnimationDescription drinksText">
             <p>These buttons select a range of X3D animation options</p>
             </div>
@@ -144,21 +136,20 @@
         <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
             <li class="nav-item">
-                <a class="nav-link active dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" >Render</a>
-                <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Polygon</a>
-                <a class="dropdown-item" href="#" onclick="wireframe();">Wireframe</a>
-                <a class="dropdown-item" href="#">Vertex</a>
-                </div>
+                <a class="nav-link" href="#" id="navbardrop" data-toggle="dropdown" >
+                    Render
+                </a>
             </li>
             <!-- Dropdown nav-tab -->
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">Lights</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Lights
+                </a>
                 <div class="dropdown-menu">
-                <a class="dropdown-item" href="#">Default</a>
-                <a class="dropdown-item" href="#">Onmi On/Off</a>
-                <a class="dropdown-item" href="#">Target On/Off</a>
-                <a class="dropdown-item" href="#">Headlight On/Off</a>
+                    <a class="dropdown-item" href="#">Default</a>
+                    <a class="dropdown-item" href="#">Onmi On/Off</a>
+                    <a class="dropdown-item" href="#">Target On/Off</a>
+                    <a class="dropdown-item" href="#">Headlight On/Off</a>
                 </div>
             </li>
             </ul>
@@ -167,10 +158,10 @@
             <div class="card-Title x3dRendersubtitle drinksText">
             <h3>Render and Lighting Options</h3>
             </div>
-            <a href="#" class="btn btn-success btn-responsive">Poly</a>
-            <a href="#" class="btn btn-secondary btn-responsive" onclick="wireframe();">Wire</a>
-            <a href="#" class="btn btn-success btn-responsive" onclick="headlight();">Headlight</a>
-            <a href="#" class="btn btn-outline-dark btn-responsive">Default</a>
+            <a href="#" class="btn btn-custom btn-responsive">Poly</a>
+            <a href="#" class="btn btn-custom btn-responsive" onclick="wireframe();">Wire</a>
+            <a href="#" class="btn btn-custom btn-responsive" onclick="headlight();">Headlight</a>
+            <a href="#" class="btn btn-custom btn-responsive">Default</a>
             <div class="card-text x3dRenderDescription drinksText">
             <p>These buttons select a limited number of render and lighting options; use the dropdown menus for more options</p>
             </div>
