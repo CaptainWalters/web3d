@@ -8,6 +8,20 @@ class Controller {
         $this->load = new Load();
         $this->model = new Model();
 
+        //echo $pageURI;
+        //$request = explode("/",$pageURI);
+        $pageURI = strtok($pageURI,"?");
+        //echo $pageURI;
+        //$stream = strtok("");
+        //parse_str($pageURI,$this->parameters);
+
+        if (isset($_GET['id'])) {
+            //echo gettype($_GET['id']);
+        } else {
+             
+            // Fallback behaviour goes here
+        }
+
         $this->$pageURI();
     }
 
@@ -20,7 +34,9 @@ class Controller {
     }
 
     function modelView() {
-        $this->load->view('modelView');
+        $data=$this->model->dbGetJson();
+        $id=$_GET['id'];
+        $this->load->view('modelView',$data,$id);
     }
 
     function variations() {

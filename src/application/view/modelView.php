@@ -7,35 +7,40 @@
             <div class="card text-left">
                 <div class="card-header">
                     <ul class="nav nav-tabs card-header-tabs">
-                        <li class="nav-item">
-                            <a id="navCoke" class="nav-link" href="#">Coke</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="navSprite" class="nav-link" href="#">Sprite</a>
-                        </li>
-                        <li class="nav-item">
-                            <a id="navPepper" class="nav-link" href="#">Dr. Pepper</a>
-                        </li>
+                        <?php
+                        foreach ($data->components as $part) {
+                            $tid=$part->id;
+                            echo '<li class="nav-item">
+                                <a id="modelNav" class="nav-link" href="./modelview?id='.$tid.'">'.$part->name.'</a>
+                                </li>';
+                        };
+                        ?>
                     </ul>
                 </div>
+                
                 <div class="card-body">
-                    <!-- coke x3d model -->
-                    <div id="coke">
-                        <div id="x3dModelTitle_coke" class="card-title drinksText"></div>
-                        <!-- Place the X3D code here -->
-                        <div class="model3D">
-                        <x3d>
-                            <scene>
-                            <inline nameSpaceName="model" mapDEFToID="true"
-                                onclick="animateModel();" url="assets/x3d/coke.x3d"> </inline>
-                            </scene>
-                        </x3d>
-                        </div> 
-                        <div id="x3dCreationMethod_coke" class="card-text drinksText"></div>
-                    </div>
+                    <!-- X3D model -->
+                    <?php echo
+                    '<h1 id="modelTitle" class="card-title">
+                        '.$data->components[$id]->name.'
+                    </h1>
+                    <!-- X3D code here -->
+                    
+                    <x3d class="model3D">
+                        <scene>
+                        <inline nameSpaceName="model" mapDEFToID="true"
+                            onclick="animateModel();" url="assets/x3d/'.$data->components[$id]->name.'.x3d"> </inline>
+                        </scene>
+                    </x3d> 
+                    <p id="modelDescription" class="card-text drinksText">
+                        '.$data->components[$id]->short_description.'
+                    </p>'
+                    ?>
                 </div>
             </div>
         </div>
+
+
         <!-- 3D image gallery -->
         <div class="col-sm-4">
             <div class="card text-left">
@@ -53,6 +58,21 @@
                 </div>
             </div>
         </div>
+    
+    <!--<?php
+        $dirname = "images/";
+        $images = scandir($dirname);
+        shuffle($images);
+        $ignore = Array(".", "..");
+        foreach($images as $curimg){
+            if(!in_array($curimg, $ignore)) {
+                echo "<li><a href='".$dirname.$curimg."'><img src='img.php?src=".$dirname.$curimg."&w=300&zc=1' alt='' /></a></li>n ";
+            }
+        }                 
+        ?> -->
+
+
+
     </div>
 
         
