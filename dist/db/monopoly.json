@@ -1,0 +1,34 @@
+{
+    "components": [
+      {
+        "id": "1",
+        "name": "Board",
+        "short_description": "the game board",
+        "long_description": "a_long_string"
+      },
+      {
+        "id": "2",
+        "name": "Top Hat",
+        "short_description": "player token; 'Top hat'",
+        "long_description": "a_long_string"
+      },
+      {
+        "id": "3",
+        "name": "Houses & Hotels",
+        "short_description": "the buildings",
+        "long_description": "a_long_string"
+      },
+      {
+        "id": "4",
+        "name": "Chance Deck",
+        "short_description": "The deck Chance cards",
+        "long_description": "a_long_string"
+      },
+      {
+        "id": "5",
+        "name": "Dice",
+        "short_description": "A game standard die",
+        "long_description": "a_long_string"
+      }
+    ]
+  }
