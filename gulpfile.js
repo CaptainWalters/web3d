@@ -6,14 +6,14 @@ const php         = require('gulp-connect-php');
 // Copying html
 gulp.task('html', function() {
     return gulp.src('./src/**/*.html')
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./build'))
         .pipe(browserSync.stream());
 });
 
 // Copying php
 gulp.task('php', function() {
     return gulp.src('./src/**/*.php')
-        .pipe(gulp.dest('./dist'))
+        .pipe(gulp.dest('./build'))
         .pipe(browserSync.stream());
 });
 
@@ -21,27 +21,37 @@ gulp.task('php', function() {
 gulp.task('sass', function () {
     return gulp.src('./src/scss/**/*.scss')
         .pipe(sass())
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./build/css'))
         .pipe(browserSync.stream());
 });
 
 // Copying JS
 gulp.task('js', function() {
     return gulp.src('./src/js/**/*.js')
-        .pipe(gulp.dest('./dist/js'))
+        .pipe(gulp.dest('./build/js'))
 });
+
+gulp.task('assets', () => (
+    gulp.src('./src/assets/**/*')
+        .pipe(gulp.dest('./build/assets'))
+))
+
+gulp.task('db', () => (
+    gulp.src('./src/db/*')
+        .pipe(gulp.dest('./build/db'))
+))
 
 // Copying fonts 
 gulp.task('fonts', function() {
     return gulp.src('./src/fonts/**/*')
-      .pipe(gulp.dest('./dist/fonts'))
+        .pipe(gulp.dest('./build/fonts'))
 });
 
 // So the thing
-gulp.task('serve', gulp.series('html','php','sass','js','fonts', function() {
+gulp.task('serve', gulp.series('html','php','sass','js','fonts','assets','db', function() {
     php.server({
         port:8000,
-        base:'./dist/',
+        base:'./build/',
         keepalive: true
     }, function() {
         browserSync.init({
