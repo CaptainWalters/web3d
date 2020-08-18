@@ -11,7 +11,7 @@
                         foreach ($data->components as $part) {
                             $tid=$part->id;
                             echo '<li class="nav-item">
-                                <a id="modelNav" class="nav-link" href="./modelview?id='.$tid.'">'.$part->name.'</a>
+                                <a id="modelNav" class="nav-link" href="?modelview?id='.$tid.'">'.$part->name.'</a>
                                 </li>';
                         };
                         ?>

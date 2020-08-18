@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <!-- main -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <!--end of stylesheets -->
     <title>Monopoly museum</title>
 </head>
@@ -19,7 +19,7 @@
     <!-- Navigation bar -->
     <nav id="navigation" class="navbar sticky-top navbar-expand-sm">
         <div class="container">
-            <a class="logo navbar-brand" href="index.php">
+            <a class="logo navbar-brand" href="./">
                 <i class="fas fa-dice fa-2x"></i>
                 <h1>MONOPOLY</h1>
                 <h2>Museum</h2>
@@ -34,22 +34,22 @@
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a id="navHome" class="nav-link" href="/index.php">Home</a>
+                        <a id="navHome" class="nav-link" href="./index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a id="navModels" class="nav-link" href="/index.php/modelview?id=0">Models</a>
+                        <a id="navModels" class="nav-link" href="?modelview">Models</a>
                     </li>
                     <li class="nav-item">
-                        <a id="navVariations" class="nav-link disabled" href="/index.php/variations">Variations</a>
+                        <a id="navVariations" class="nav-link disabled" href="?variations">Variations</a>
                     </li>
                     <li class="nav-item dropright">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Web3d assessment
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/index.php/statement">Statement of Originality</a>
-                            <a class="dropdown-item" href="assets/downloads/codebase.zip">Codebase Download</a>
-                            <a class="dropdown-item" href="assets/downloads/models.zip">Model Download</a>
+                            <a class="dropdown-item" href="?statement">Statement of Originality</a>
+                            <a class="dropdown-item" href="?assets/downloads/codebase.zip">Codebase Download</a>
+                            <a class="dropdown-item" href="?assets/downloads/models.zip">Model Download</a>
                         </div>
                     </li>
                 </ul>
@@ -59,11 +59,14 @@
 
     <!-- SPA content -->
     <?php
-    
+
     error_reporting(E_ALL | E_STRICT);
     ini_set('display_errors', 1);
 
-    require './application/mvc.php';
+    require __DIR__ . '/application/view/load.php';
+    require __DIR__ . '/application/model/model.php';
+    require __DIR__ . '/application/controller/controller.php';
+    require __DIR__ . '/application/mvc.php';
     ?>
     <!-- End of PHP hell -->
 
@@ -79,7 +82,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     <!-- Custom stuff -->
-    <script type="text/javascript" src="/js/main.js"></script>
-    <script type="text/javascript" src="/js/home.js"></script>
+    <script type="text/javascript" src="./js/home.js"></script>
 </body>
 </html>

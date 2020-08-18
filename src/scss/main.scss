@@ -26,7 +26,6 @@ body {
 }
 
 main {
-    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -52,6 +51,9 @@ main {
         border: 1px solid rgba(0, 0, 0, 1.0);
         padding: 2px;
         height: 200px;
+    }
+    img{
+        max-width: 100%;
     }
     X3D, x3d {
         border-radius: 5px;
@@ -84,7 +86,7 @@ main {
     }
 }
 
-.navbar_coca_cola {
+.navbar {
     background-color: maroon;
     min-height: 20px;
 
@@ -104,7 +106,7 @@ main {
                     background-color: white;
                 }
             }
-            .dropdown-menu{
+            .dropdown-menu {
                 background-color: rgb(245,235,235);
                 a {
                     color: #760003;
@@ -113,18 +115,8 @@ main {
                     }
                 }
             }
-        }
-    }
-    .nav-pills {
-        .nav-link.active, .show {
-            .nav-link {
-                background-color: rgb(245,235,235);
-                color: #760003;
-            }
-        }
-        .show {
-            a:hover {
-                background-color: white;
+            .disabled {
+                color: #747474;
             }
         }
     }
@@ -261,7 +253,8 @@ main {
     background-image: url(../assets/images/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 201px;
+    background-position: center;
+    height: 8rem;
 }
 
 #main_text {
@@ -294,13 +287,13 @@ main {
 
 @media(min-width: 576px) {
     #banner {
-        height: 240px;
+        height: 20rem;
     }
 }
 
 @media(min-width: 992px) {
     #banner {
-        min-height: 550px;
+        min-height: 32rem;
     }
     .logo {
         margin-top: -5px;
