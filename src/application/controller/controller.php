@@ -10,20 +10,22 @@ class Controller {
     }
             
     function parsePageURI ($pageURI = null) {
-        $function = strtok($pageURI,"?");
-        $id = strtok("?");
-        $this->$function($id);
+        $action = strtok($pageURI,"&");
+        if (method_exists($this, $action)) {
+            $this->$action();
+        } else {
+            $this->home();
+        }
     }
     
     function home() {
         $this->load->view('home', $this);
     }
     
-    function modelView($id) {
+    function modelview() {
         $data=$this->model->dbGetJson();
-        if (!empty($id)) {
-            //$id=$_GET['id'];
-            $id = substr($id, 3);
+        if (isset($_GET['id'])) {
+            $id=$_GET['id'];
             $this->load->view('modelView',$data,$id);
         } else {
             $this->load->view('modelView',$data,0);
