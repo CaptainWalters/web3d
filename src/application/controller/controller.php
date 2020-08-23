@@ -25,8 +25,7 @@ class Controller {
     function modelview() {
         $data=$this->model->dbGetJson();
         if (isset($_GET['id'])) {
-            $id=$_GET['id'];
-            $this->load->view('modelView',$data,$id);
+            $this->load->view('modelView',$data,$_GET['id']);
         } else {
             $this->load->view('modelView',$data,0);
         }
@@ -41,5 +40,3 @@ class Controller {
     }
    
 }
-
-?>
