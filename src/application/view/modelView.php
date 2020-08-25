@@ -26,13 +26,13 @@
                     </h1>
                     <!-- X3D code here -->
                     
-                    <x3d class="model3D">
+                    <x3d class="model3D" id="x3d">
                         <scene>
                         <inline nameSpaceName="model" mapDEFToID="true"
-                            onclick="animateModel();" url="assets/x3d/'.$data->components[$id]->name.'.x3d"> </inline>
+                            url='assets/x3d/<?php echo $data->components[$id]->name ?>.X3D'></inline>
                         </scene>
                     </x3d> 
-                    <p id="modelDescription" class="card-text drinksText">
+                    <p id="modelDescription" class="card-text">
                         <?php echo $data->components[$id]->short_description ?>
                     </p>
                     
@@ -44,28 +44,19 @@
         <!-- 3D image gallery -->
         <div class="col-sm-4">
             <div class="card text-left">
-                <div class="card-header gallery-header">
-                    <h3 class="card-title">Gallery</h3>
+                <div class="card-header about-header">
+                    <h3 class="card-title">About</h3>
                 </div>
                 <div class="card-body">
-                    <div class="card-title title_gallery"></div>
-                    <div class="gallery" id="gallery"></div>
-                    <div class="card-text description_gallery"></div>
+                    <div class="card-text">
+                        <p>
+                            These models were build using Shap3r, converted to 3DS Max where lighting and views were added, then exported to VRML97 and converted into X3D files for display.</br>
+                            At present, Views only work on the dice and no render is animated
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    
-    <?php
-        // $dirname = "images/";
-        // $images = scandir($dirname);
-        // shuffle($images);
-        // $ignore = Array(".", "..");
-        // foreach($images as $curimg){
-        //     if(!in_array($curimg, $ignore)) {
-        //         echo "<li><a href='".$dirname.$curimg."'><img src='img.php?src=".$dirname.$curimg."&w=300&zc=1' alt='' /></a></li>n ";
-        //     }
-        // }
-    ?>
     </div>
 
         
@@ -78,12 +69,10 @@
                 <h3 class="card-title x3dCameraSubtitle">Camera Views</h3>
             </div>
             <div class="card-body">
-                <a href="#" class="btn btn-custom btn-responsive camera-font">Default</a>
-                <a href="#" class="btn btn-custom btn-responsive camera-font">Back</a>
-                <a href="#" class="btn btn-custom btn-responsive camera-font">Left</a>
-                <a href="#" class="btn btn-custom btn-responsive camera-font">Right</a>
-                <a href="#" class="btn btn-custom disabled btn-responsive camera-font">Off</a>
-                <div class="card-text x3dCameraDescription drinksText">
+                <a href="#" class="btn btn-custom btn-responsive camera-font" onclick="defaultView()">Default</a>
+                <a href="#" class="btn btn-custom btn-responsive camera-font" onclick="backView()">Back</a>
+                <a href="#" class="btn btn-custom btn-responsive camera-font" onclick="sideView()">Side</a>
+                <div class="card-text x3dCameraDescription">
                 <p>These buttons select a limited range of X3D model viewpoints, use the dropdown menu for more camera views</p>
                 </div>
             </div>
@@ -96,11 +85,9 @@
                 <h3 class="card-title x3dCameraSubtitle">Animation</h3>
             </div>
             <div class="card-body">
-                <a href="#" class="btn btn-custom btn-responsive" onclick="spin();">RotX</a>
-                <a href="#" class="btn btn-custom btn-responsive">RotY</a>
-                <a href="#" class="btn btn-custom btn-responsive">RotZ</a>
-                <a href="#" class="btn btn-custom btn-responsive" onclick="stopRotation();">Stop</a>
-                <div class="card-text x3dAnimationDescription drinksText">
+                <a href="#" class="btn btn-custom btn-responsive disabled" onclick="animate();">Animate</a>
+                <a href="#" class="btn btn-custom btn-responsive disabled" onclick="stop();">Stop</a>
+                <div class="card-text x3dAnimationDescription">
                 <p>These buttons select a range of X3D animation options</p>
                 </div>
             </div>
@@ -113,11 +100,10 @@
                 <h3 class="card-title x3dCameraSubtitle">Render and Lighting Options</h3>
             </div>
             <div class="card-body">
-                <a href="#" class="btn btn-custom btn-responsive">Poly</a>
                 <a href="#" class="btn btn-custom btn-responsive" onclick="wireframe();">Wire</a>
                 <a href="#" class="btn btn-custom btn-responsive" onclick="headlight();">Headlight</a>
-                <a href="#" class="btn btn-custom btn-responsive">Default</a>
-                <div class="card-text x3dRenderDescription drinksText">
+                <a href="#" class="btn btn-custom btn-responsive disabled">Default</a>
+                <div class="card-text x3dRenderDescription">
                 <p>These buttons select a limited number of render and lighting options; use the dropdown menus for more options</p>
                 </div>
             </div>

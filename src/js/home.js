@@ -9,12 +9,12 @@ $(document).ready(function () {
               <div class="card-header">\
                 <a href="assets/images/' +
         name +
-        '.jpg" data-fancybox=monopoly data-caption="' +
+        '.png" data-fancybox=monopoly data-caption="' +
         name +
         '">\
                   <img src="assets/images/' +
         name +
-        '.jpg" alt="' +
+        '.png" alt="' +
         name +
         '">\
                 </a>\
