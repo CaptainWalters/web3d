@@ -4,7 +4,7 @@
   "description": "Interactive museum - Web3D module project",
   "main": "index.js",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-connect-php": "^1.0.3",
